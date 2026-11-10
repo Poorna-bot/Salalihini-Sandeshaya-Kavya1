@@ -1,0 +1,19 @@
+name: Content Correction
+description: Suggest an improvement to a Sinhala or English verse explanation
+title: "[Verse N]: "
+labels: ["content"]
+body:
+  - type: input
+    id: verse
+    attributes:
+      label: Verse Number (1-111)
+      placeholder: "e.g. 29"
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: Explain how the Sinhala or English explanation can be clearer or more accurate.
+    validations:
+      required: true

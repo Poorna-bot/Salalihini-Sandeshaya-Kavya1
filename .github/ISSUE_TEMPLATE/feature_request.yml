@@ -1,0 +1,12 @@
+name: Feature Request
+description: Propose a calm, thoughtful enhancement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposal
+      description: Describe the feature and how it helps readers understand or enjoy the poem.
+    validations:
+      required: true

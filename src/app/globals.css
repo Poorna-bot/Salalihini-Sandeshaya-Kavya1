@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #f0f9ff;
+  --ink-soft: #bae6fd;
+  --ink-faint: #7dd3fc;
+  --neon-blue: #00e5ff;
+  --gold: #00e5ff;
+  --line: rgba(0, 229, 255, 0.18);
+  color-scheme: dark;
+}
+
+@theme {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-gold: var(--gold);
+  --color-neon: var(--neon-blue);
+  --color-line: var(--line);
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-elu: var(--font-noto-serif-si), serif;
+  --font-sinhala: var(--font-noto-sans-si), sans-serif;
+}
+
+html {
+  background-color: #030816;
+  color: var(--ink);
+}
+
+body {
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Subtle film grain overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 35;
+  opacity: 0.11;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grainShift 0.9s steps(6) infinite;
+}
+
+html.calm-mode body::after {
+  animation: none;
+  opacity: 0.05;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after {
+    animation: none;
+  }
+}
+
+@keyframes grainShift {
+  0% { background-position: 0 0; }
+  20% { background-position: -30px 20px; }
+  40% { background-position: 25px -25px; }
+  60% { background-position: -20px -15px; }
+  80% { background-position: 15px 30px; }
+  100% { background-position: 0 0; }
+}
+
+.glass {
+  background: rgba(3, 12, 32, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 40px rgba(0, 12, 36, 0.55), 0 0 24px rgba(0, 229, 255, 0.07);
+}
+
+.rule-gold,
+.rule-neon {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.45), transparent);
+}
+
+.thin-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.35);
+  border-radius: 9999px;
+}
+
+::selection {
+  background: #00e5ff;
+  color: #030816;
+}

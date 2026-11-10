@@ -1,0 +1,19 @@
+name: Bug Report
+description: Report a visual, 3D, or layout issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: route
+    attributes:
+      label: Route or Verse
+      placeholder: "e.g. /map or /verse/17"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened?
+      description: Describe the issue and the device/browser used.
+    validations:
+      required: true

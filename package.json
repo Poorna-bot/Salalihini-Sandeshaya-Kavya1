@@ -1,0 +1,62 @@
+{
+  "name": "salalihini-sandeshaya",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An educational, immersive 3D website in a Neon Blue aesthetic for Salalihini Sandeshaya, the 15th-century Sinhala messenger poem by Thotagamuwe Sri Rahula.",
+  "license": "MIT",
+  "author": "Poorna Thalisha",
+  "homepage": "https://github.com/Poorna-bot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Poorna-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Poorna-bot/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Poorna-bot"
+  },
+  "keywords": [
+    "sinhala",
+    "sri-lanka",
+    "salalihini-sandeshaya",
+    "elu-sinhala",
+    "literature",
+    "threejs",
+    "nextjs",
+    "neon-blue"
+  ],
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src",
+    "typecheck": "next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "@react-three/postprocessing": "^3.0.0",
+    "motion": "^12.4.7",
+    "next": "^15.2.0",
+    "postprocessing": "^6.36.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.174.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.0",
+    "@tailwindcss/postcss": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/three": "^0.174.0",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "^15.2.0",
+    "tailwindcss": "^4.0.9",
+    "typescript": "^5.7.3"
+  }
+}
